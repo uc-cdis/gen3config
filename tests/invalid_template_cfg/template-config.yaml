@@ -1,0 +1,9 @@
+---
+BASE_URL: 'http://localhost/user'
+OPENID_CONNECT:
+  fence:
+    api_base_url: 'http://other_fence/user'
+    client_kwargs:
+      redirect_uri: '{{BASE_URL}}/login/fence/login'
+    authorize_url: '{{api_base_url}}/oauth2/authorize'
+THIS_WONT_WORK: '{{api_base_url}}/test'
