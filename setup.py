@@ -15,7 +15,7 @@ def get_version():
         tag = check_output(
             ["git", "describe", "--tags", "--abbrev=0", "--match=[0-9]*"]
         )
-        return tag.decode('utf-8').strip("\n")
+        return tag.decode("utf-8").strip("\n")
     except Exception:
         raise RuntimeError(
             "The version number cannot be extracted from git tag in this source "
@@ -27,11 +27,14 @@ def get_version():
 setup(
     name="gen3config",
     version=get_version(),
-    description="Gen3 Library Template",
+    description="Gen3 Configuration Library",
     url="https://github.com/uc-cdis/gen3config",
     license="Apache",
     packages=find_packages(),
     install_requires=[
         "cdiserrors~=0.1",
+        "cdislogging~=0.1",
+        "PyYAML~=3.13",
+        "six~=1.12.0",
     ],
 )
