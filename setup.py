@@ -34,7 +34,7 @@ setup(
     install_requires=[
         "cdiserrors~=0.1",
         "cdislogging~=0.1",
-        "PyYAML~=3.13",
+        "PyYAML~=4.2",
         "six~=1.12.0",
     ],
 )
