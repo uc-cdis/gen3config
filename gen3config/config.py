@@ -294,7 +294,7 @@ def nested_render(cfg, fully_rendered_cfgs, replacements):
     Returns:
         dict: Configurations with template vars replaced
     """
-    try:
+    if isinstance(cfg, dict):
         for key, value in six.iteritems(cfg):
             replacements.update(cfg)
             fully_rendered_cfgs[key] = {}
@@ -308,7 +308,7 @@ def nested_render(cfg, fully_rendered_cfgs, replacements):
                 replacements.pop(old_cfg, None)
 
         return fully_rendered_cfgs
-    except AttributeError:
+    else:
         # it's not a dict, so lets try to render it. But only if it's
         # truthy (which means there's actually something to replace)
         if cfg:
