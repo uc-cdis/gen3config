@@ -67,6 +67,8 @@ print(config["SOME_VALUE"])  # 'app-specific configuration'
 print(config["EXAMPLE"]["nested"]["key"])  # 'value'
 ```
 
+> NOTE: `config["EXAMPLE"]["nested"]["key"]` does not exist in the provided configuration, but it does exist in the default configuration. Therefore, the default value, `'value'` is retrieved.
+
 ## Details:
 
 - Create a `config-default.yaml` and `config.py` in the top-level folder your app
