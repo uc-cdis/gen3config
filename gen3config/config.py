@@ -74,7 +74,7 @@ from cdislogging import get_logger
 
 from gen3config.errors import NotFoundError, ParsingError
 
-logger = get_logger(__name__)
+logger = get_logger(__name__, log_level="info")
 
 
 class Config(dict):
