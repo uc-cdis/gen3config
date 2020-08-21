@@ -362,6 +362,6 @@ def get_config_path(search_folders, file_name="*config.yaml"):
         )
     else:
         raise NotFoundError(
-            "Could not find *config.yaml. Searched in the following locations: "
-            "{}".format(str(search_folders))
+            "Could not find config file {}. Searched in the following locations: "
+            "{}".format(file_name, str(search_folders))
         )
