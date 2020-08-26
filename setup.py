@@ -31,5 +31,11 @@ setup(
     url="https://github.com/uc-cdis/gen3config",
     license="Apache",
     packages=find_packages(),
-    install_requires=["cdiserrors~=0.1", "cdislogging~=1.0", "PyYAML~=5.1", "six~=1.0"],
+    install_requires=[
+        "cdiserrors~=1.0",
+        "cdislogging~=1.0",
+        "jinja2~=2.10.1",
+        "PyYAML~=5.1",
+        "six~=1.0",
+    ],
 )
