@@ -172,11 +172,15 @@ class Config(dict):
 
     def load_configuration_file(self, provided_cfg_path):
         logger.info("Opening default configuration...")
-        config = yaml_load(open(self.default_cfg_path))
-
+        
+        # treat default cfg as template and replace nested vars, returning an updated dict
+        config =  nested_render(
+            yaml_load(open(self.default_cfg_path)), {}, {}
+        )
+        
         logger.info("Applying configuration: {}".format(provided_cfg_path))
 
-        # treat cfg as template and replace vars, returning an updated dict
+        # treat provided cfg as template and replace nested vars, returning an updated dict
         provided_configurations = nested_render(
             yaml_load(open(provided_cfg_path)), {}, {}
         )
