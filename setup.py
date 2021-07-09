@@ -34,7 +34,7 @@ setup(
     install_requires=[
         "cdiserrors~=1.0",
         "cdislogging~=1.0",
-        "jinja2~=2.10.1",
+        "jinja2~=2.11.0",
         "PyYAML~=5.1",
         "six~=1.0",
     ],
