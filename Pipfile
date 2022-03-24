@@ -5,8 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 codacy-coverage = "*"
-pytest = "~=3.2"
-pytest-cov = "~=2.5"
+pytest = ">=3.2.3"
+pytest-cov = ">=2.5.1"
 PyGithub = "*"
 
 [packages]
