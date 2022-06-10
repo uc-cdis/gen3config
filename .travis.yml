@@ -3,6 +3,7 @@ dist: xenial
 language: python
 python:
   - 3.6
+  - 3.9
 cache:
   - pip
   - apt
@@ -24,6 +25,7 @@ deploy:
   skip_existing: true
   skip_cleanup: true
   on:
+    python: 3.9
     tags: true
   password:
     secure: DJuzOrEZc830oNyPoyT92Kh6oVpDiXM/U8/neXOJPXTw1bmGw1TN8BK8zDntV7J8m7sqt6LVY48HDI1/+xL84mDwDE82+7XxBprcKRHrMidvs8orJZli3dELv46YEALdXwLcIMNQTRIgT6P6xnQhHVC2Ms60gvN1d2lnDBFY/N6uRDeeqilo7w97YNRQaugjN793wAtgADK41CxwL32sc+y7R7um31vHvnL1RgHkRxUl49rXnTttTdvwZrJKzOWKi8/Zyj7qBd9rckTICAqRmpueOSJYJy3N+R8tgN2g2dq5kOoBy1XSTjej0JJArwbBary9j8DWd8/JMtoEl7YLOub83XlEYbpjB2U1EbAbWWcWnYBmUo/IT26/T8ku1DzOqxRLXK/CS2BbDEZhe2VW4f+NILp2sKDM0zV2/ID3IXM/Kxk5yBol60D+7xh3AIi/Vav6oOMozkiFssNVLvIGN3E4/U2fbib3dHIOP46SqInW0K5o+8awRDn7ihApRG1Gqw7zDEnMA4Lo0ElcO7qYQ0NlhWhj6H8ET7V/dJdM8CkI7FTtnyRvJhqpOvIYtRfN4Vh/oSWAjQZ/3JiX6y9ygccftAd9qmSWxeAjb7lFBL53hg4/rBNLG1Ee/iy5VUyGIxBvIO/0nbpDR8lg/Ju7KfsPyhwyNeXejWAUGLAb6K4=
