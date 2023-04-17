@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "gen3config"
+version = "1.1.0"
+description = "Gen3 Configuration Library"
+authors = ["CTDS UChicago <cdis@uchicago.edu>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/uc-cdis/gen3config"
+include = [
+  "NOTICE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml = "*"
+six = "*"
+jinja2 = "*"
+cdislogging = "*"
+cdiserrors = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+codacy-coverage = "*"
+pytest-cov = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
