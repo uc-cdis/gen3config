@@ -122,8 +122,8 @@ class Config(dict):
         return key in self._configs
 
     def __iter__(self):
-        for key, value in six.iteritems(self._configs):
-            yield key, value
+        for key in self._configs:
+            yield key
 
     def __getitem__(self, key):
         return self._configs[key]
@@ -172,12 +172,10 @@ class Config(dict):
 
     def load_configuration_file(self, provided_cfg_path):
         logger.info("Opening default configuration...")
-        
+
         # treat default cfg as template and replace nested vars, returning an updated dict
-        config =  nested_render(
-            yaml_load(open(self.default_cfg_path)), {}, {}
-        )
-        
+        config = nested_render(yaml_load(open(self.default_cfg_path)), {}, {})
+
         logger.info("Applying configuration: {}".format(provided_cfg_path))
 
         # treat provided cfg as template and replace nested vars, returning an updated dict
