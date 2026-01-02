@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gen3config"
-version = "2.0.0"
+version = "2.1.0"
 description = "Gen3 Configuration Library"
 authors = ["CTDS UChicago <cdis@uchicago.edu>"]
 license = "Apache-2.0"
@@ -11,7 +11,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.13,<4"
 pyyaml = "*"
 six = "*"
 jinja2 = "*"
@@ -22,6 +22,7 @@ cdiserrors = "*"
 pytest = "*"
 codacy-coverage = "*"
 pytest-cov = "*"
+deptry = "^0.24.0"
 
 [build-system]
 requires = ["poetry-core"]
