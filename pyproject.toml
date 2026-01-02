@@ -11,7 +11,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.13,<4"
 pyyaml = "*"
 six = "*"
 jinja2 = "*"
@@ -22,6 +22,7 @@ cdiserrors = "*"
 pytest = "*"
 codacy-coverage = "*"
 pytest-cov = "*"
+deptry = "^0.24.0"
 
 [build-system]
 requires = ["poetry-core"]
